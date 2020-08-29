@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-bottom-left-radius:10%;
+    border-bottom-right-radius:10%;
+}
+li {
+    float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+  /* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+  }
+  img{
+    margin-left:200px;
+    margin-top: 50px;
+    width:1000px;
+    height: 400px;
+  }
+  h1{
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="default.asp">Home page </a></li>
+  <li><a href="news.asp">Our Services</a></li>
+  <li><a href="contact.asp">Contact us</a></li>
+</ul>
+<h1>Welcome to {{name}}</h1>
+<br>
+<img src={{image}}>
+</body>
+</html>
