@@ -3,6 +3,14 @@ const hbs=require('hbs');
 
 const app=express();
 
+app.use(date=(req,res,next)=>{
+    let requestDate=new Date();
+    let requestDay= requestDate.getDay();
+    let requestHours= requestDate.getHours();
+    console.log(requestDay,requestHours)
+    if(requestDay>0&&requestDay<6){if(requestHours>8&&requestHours<18){next()}};
+})
+
 app.set('view engine',hbs);
 
 app.get('/home',(req,res)=>{
